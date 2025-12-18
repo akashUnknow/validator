@@ -1,0 +1,59 @@
+/* Root container */
+.root {
+    -fx-font-family: "Segoe UI", "Inter", "Roboto", sans-serif;
+    -fx-background-color: #0f172a; /* dark slate */
+}
+
+/* Sidebar container */
+.menu_container {
+    -fx-background-color: #020617;
+    -fx-padding: 10;
+    -fx-spacing: 8;
+}
+
+/* Default button style */
+.menu_container .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e5e7eb;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 14 10 14;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-graphic-text-gap: 12;
+}
+
+/* Icon color */
+.menu_container .button .glyph-icon {
+    -fx-fill: #94a3b8;
+}
+
+/* Hover effect */
+.menu_container .button:hover {
+    -fx-background-color: #1e293b;
+}
+
+/* Hover icon */
+.menu_container .button:hover .glyph-icon {
+    -fx-fill: #38bdf8;
+}
+
+/* Active / selected menu */
+.menu_container .button:focused {
+    -fx-background-color: linear-gradient(
+            to right,
+            #2563eb,
+            #1e40af
+    );
+    -fx-text-fill: white;
+}
+
+.menu_container .button:focused .glyph-icon {
+    -fx-fill: white;
+}
+
+/* Optional: subtle shadow */
+.menu_container {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 20, 0, 4, 0);
+}

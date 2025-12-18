@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox prefHeight="750.0" prefWidth="180.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.akash.validator.controller.MenuController">
-    <AnchorPane prefHeight="730.0" prefWidth="160.0">
-        <VBox prefHeight="400.0" prefWidth="180.0" styleClass="menu_container" AnchorPane.leftAnchor="0.0"
-              AnchorPane.topAnchor="100.0">
+<BorderPane
+        stylesheets="@../style/menu.css"
+        xmlns="http://javafx.com/javafx/17.0.12"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="org.akash.validator.controller.MenuController">
+
+    <!-- LEFT SIDEBAR -->
+    <left>
+        <VBox prefWidth="180.0" styleClass="menu_container">
+
             <Button fx:id="validator_btn" mnemonicParsing="false" text="Validator">
                 <graphic>
                     <FontAwesomeIconView glyphName="HOME" size="20"/>
                 </graphic>
             </Button>
-            <Button fx:id="test_btn1" mnemonicParsing="false" text="test">
+
+            <Button fx:id="test_btn1" mnemonicParsing="false" text="Test">
                 <graphic>
                     <FontAwesomeIconView glyphName="HOME" size="20"/>
                 </graphic>
             </Button>
+
         </VBox>
-    </AnchorPane>
-</VBox>
+    </left>
+
+</BorderPane>
